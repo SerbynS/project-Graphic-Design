@@ -871,7 +871,7 @@ main .my-task .icon {
   }
 }
 .projects {
-  background-image: url(../../img/desktop/dBg.png);
+  background-image: url(./../img/desktop/dBg.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 130px;
@@ -1083,7 +1083,7 @@ main .my-task .icon {
 @media (min-width: 992px) {
   .MyTask {
     height: 945.13px;
-    background-image: url(../../img/Rectangle\ 35.png);
+    background-image: url(./../img/Rectangle\ 35.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -1191,7 +1191,7 @@ main .my-task .icon {
 @media (min-width: 992px) {
   .Reviews {
     height: 1766px;
-    background-image: url(../../img/backgraund2.png);
+    background-image: url(./../img/backgraund2.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -1315,7 +1315,7 @@ main .my-task .icon {
     left: 150px;
     height: 505px;
     width: 1181.54px;
-    background-image: url(../../img/bg2.png);
+    background-image: url(./../img/bg2.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -1455,7 +1455,7 @@ main .my-task .icon {
   margin: 0;
   padding: 0;
   height: 1186px;
-  background-image: url(../../img/backgraund2.png);
+  background-image: url(./../img/backgraund2.png);
   background-repeat: no-repeat;
 }
 .Reviews h1 {
@@ -1569,7 +1569,7 @@ main .my-task .icon {
 .ContactMe {
   position: relative;
   height: 703.06px;
-  background-image: url(../../img/ContactMe-bg.png);
+  background-image: url(./../img/ContactMe-bg.png);
   background-repeat: no-repeat;
 }
 .ContactMe div {
@@ -1651,7 +1651,7 @@ main .my-task .icon {
 @media (min-width: 992px) {
   .MyTask {
     height: 945.13px;
-    background-image: url(../../img/Rectangle\ 35.png);
+    background-image: url(./../img/Rectangle\ 35.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -1759,7 +1759,7 @@ main .my-task .icon {
 @media (min-width: 992px) {
   .Reviews {
     height: 1766px;
-    background-image: url(../../img/backgraund2.png);
+    background-image: url(./../img/backgraund2.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -1883,7 +1883,7 @@ main .my-task .icon {
     left: 150px;
     height: 505px;
     width: 1181.54px;
-    background-image: url(../../img/bg2.png);
+    background-image: url(./../img/bg2.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
