@@ -1,0 +1,392 @@
+@media (min-width: 992px) {
+   .container {
+      max-width: 90%;
+      // width: 100vw;
+      height: fit-content;
+
+      margin: 0 auto;
+   }
+
+   header {
+      background-image: url(../img/black-bg-desktop.png);
+
+      nav {
+         label {
+            span,
+            span::after,
+            span::before {
+               display: none;
+            }
+         }
+
+         .navigation {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            visibility: visible;
+            position: relative;
+            left: 0px;
+
+            background-color: transparent;
+            border-radius: 0;
+
+            height: max-content;
+            width: 100%;
+
+            padding: 25px 0 5px 0;
+            margin: 0;
+
+            transition-duration: 0s;
+
+            .logo {
+               width: 160px;
+               height: 56px;
+
+               background: #d80808;
+               border-radius: 27px;
+            }
+
+            .navigation-list {
+               flex-direction: row;
+
+               h2 {
+                  display: none;
+               }
+
+               .navigation-item {
+                  margin: 0 40px 0 0;
+
+                  @include text-style(400, 18px, 21px);
+
+                  &:nth-child(odd),
+                  &:nth-child(even) {
+                     width: max-content;
+                     height: max-content;
+
+                     border-radius: 0;
+
+                     padding: 0;
+                     background-color: transparent;
+                     color: white;
+
+                     div {
+                        background-color: transparent;
+
+                        border-radius: 0;
+
+                        width: max-content;
+                        height: max-content;
+                     }
+                  }
+               }
+            }
+
+            .contact-btn {
+               display: inline-block;
+               background: #d80808;
+               border-radius: 27px;
+               border: none;
+               padding: 13px 22px;
+
+               @include text-style(900, 19px, 22px);
+
+               a {
+                  text-decoration: none;
+                  color: white;
+               }
+            }
+         }
+      }
+
+      .hero {
+         height: 1004px;
+
+         .img-hero {
+            &.mobile {
+               display: none;
+            }
+
+            &.desktop {
+               display: block;
+
+               // left: 0;
+               // right: 0;
+
+               // margin: 0 auto;
+               left: 21%;
+               top: 0%;
+            }
+         }
+
+         .graphic,
+         .design {
+            display: block;
+
+            position: absolute;
+         }
+
+         .graphic {
+            top: 19%;
+            left: 6%;
+         }
+
+         .design {
+            top: 69%;
+            // left: 60%;
+            right: 4%;
+         }
+
+         .hero-quality {
+            @include text-style(700, 18px, 26px);
+
+            top: 17%;
+            left: 76%;
+         }
+
+         .hero-design {
+            @include text-style(700, 18px, 26px);
+            width: 303px;
+
+            top: 77%;
+            left: 7%;
+         }
+
+         .contact-btn-mobile {
+            display: none;
+         }
+      }
+   }
+
+   main {
+      background-image: url(../img/bg-red-desktop.png);
+      .my-task {
+         height: 945px;
+
+         h2 {
+            @include text-design(700, 57px, 59px);
+            top: 3%;
+
+            &.black {
+               left: 6%;
+            }
+
+            &.pink {
+               left: 5.28%;
+            }
+         }
+
+         .red-shape,
+         .dark-shape,
+         .light-shape {
+            position: absolute;
+         }
+
+         .red-shape {
+            &.desktop {
+               display: block;
+               left: 9%;
+               top: 9%;
+            }
+
+            &.mobile {
+               display: none;
+            }
+         }
+
+         .dark-shape {
+            &.desktop {
+               display: block;
+
+               left: 17%;
+               top: 32%;
+            }
+
+            &.mobile {
+               display: none;
+            }
+         }
+
+         .light-shape {
+            &.desktop {
+               display: block;
+
+               left: 27%;
+               top: 50%;
+            }
+
+            &.mobile {
+               display: none;
+            }
+         }
+
+         .icon {
+            position: absolute;
+
+            box-sizing: border-box;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 15px;
+
+            & div {
+               border-radius: 50%;
+
+               display: flex;
+               justify-content: center;
+               align-items: center;
+            }
+
+            &:nth-of-type(1) {
+               width: 187px;
+               height: 185.07px;
+
+               box-shadow: 0px 0px 6px 8px rgba(0, 0, 0, 0.2);
+               background-color: rgba(52, 10, 10, 0.12);
+
+               top: 6%;
+               left: 43%;
+
+               div {
+                  background: #e50000;
+                  width: 151px;
+                  height: 149.44px;
+               }
+            }
+
+            &:nth-of-type(2) {
+               width: 225px;
+               height: 223px;
+
+               box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.23);
+               background-color: rgba(26, 2, 2, 0.08);
+
+               top: 30%;
+               left: 58%;
+
+               div {
+                  background: #713232;
+                  width: 192px;
+                  height: 190px;
+               }
+            }
+
+            &:nth-of-type(3) {
+               width: 270px;
+               height: 267px;
+
+               box-shadow: 0px 0px 6px 8px rgba(0, 0, 0, 0.2);
+               background-color: rgba(6, 0, 0, 0.01);
+
+               top: 56%;
+               left: 70%;
+
+               div {
+                  background: #f0c9c9;
+                  width: 237px;
+                  height: 235px;
+               }
+            }
+         }
+      }
+   }
+
+   .modal-Contact-me {
+      background: linear-gradient(rgba(129, 1, 1, 0.52), rgba(129, 1, 1, 0.52)),
+         url(../img/bg-modal-desktop.png);
+
+      width: 1046px;
+      height: 681px;
+
+      border-radius: 24px;
+      border: 20px solid rgba(194, 0, 0, 0.52);
+
+      h2 {
+         @include text-design(700, 35px, 36px);
+
+         &:nth-child(1) {
+            top: 50px;
+            left: 47px;
+         }
+
+         &:nth-child(2) {
+            color: rgba(45, 1, 1, 0.74);
+            padding-top: 51px;
+            padding-left: 53px;
+
+            margin-bottom: 77px;
+         }
+      }
+
+      .input-modal {
+         width: 945px;
+         height: 83px;
+
+         margin: 34px auto 0;
+
+         input {
+            width: 934px;
+            height: 63px;
+
+            padding-left: 20px;
+         }
+      }
+
+      button {
+         @include text-style(900, 20px, 23px);
+
+         width: 172px;
+         height: 56px;
+
+         margin: 57px auto 0px;
+      }
+
+      // &:target {
+      //   opacity: 1;
+      // }
+   }
+
+   .modal-Thanks {
+      width: 1046px;
+      height: 681px;
+
+      position: fixed;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      border-radius: 24px;
+      border: 20px solid rgba(194, 0, 0, 0.52);
+
+      opacity: 0;
+
+      h2 {
+         @include text-design(700, 35px, 36px);
+         width: 900px;
+
+         &:nth-child(1) {
+            left: 72px;
+
+            color: white;
+         }
+
+         &:nth-child(2) {
+            color: rgba(255, 4, 4, 0.74);
+            padding-left: 75px;
+
+            margin-bottom: 160px;
+         }
+      }
+
+      button {
+         margin-left: 420px;
+      }
+
+      &:target {
+         opacity: 1;
+      }
+   }
+}

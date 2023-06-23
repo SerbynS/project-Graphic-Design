@@ -1,0 +1,187 @@
+.Reviews * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+.Reviews {
+   position: relative;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   height: 1186px;
+   background-image: url(/img/фон2\ 1.png);
+   background-repeat: no-repeat;
+
+   h1 {
+      color: #f4bdbd;
+      text-shadow: 2px 1px 0px rgba(226, 13, 13, 0.5);
+      @include textStyle(700, 33px, 34px);
+      font-family: Syncopate;
+
+      text-align: center;
+      padding-top: 20px;
+   }
+
+   .card1 {
+      position: relative;
+      top: -54px;
+
+      div {
+         img {
+            position: absolute;
+            top: 357px;
+            left: 39px;
+         }
+         h3 {
+            width: 150px;
+            position: absolute;
+            top: 395px;
+            left: 120px;
+            z-index: 2;
+            @include textStyle(700, 18px, 21px);
+            font-family: "Roboto";
+         }
+         p {
+            width: 190.14px;
+            position: relative;
+            z-index: 2;
+            @include textStyle(400, 13px, 15px);
+            font-family: "Roboto";
+            color: #000000;
+            top: -35px;
+            left: 120px;
+         }
+         hr {
+            position: relative;
+            z-index: 2;
+            border: 2px solid #000000;
+
+            width: 190.14px;
+            height: 0px;
+            top: -48px;
+            left: 97.98px;
+         }
+      }
+   }
+
+   .card2 {
+      position: relative;
+      top: -50px;
+
+      div {
+         img {
+            position: absolute;
+            top: 347px;
+            right: 15px;
+         }
+         h3 {
+            width: 150px;
+            position: absolute;
+            top: 390px;
+            left: 100px;
+            z-index: 2;
+            @include textStyle(700, 18px, 21px);
+            font-family: "Roboto";
+         }
+         hr {
+            position: relative;
+            z-index: 2;
+            border: 2px solid #000000;
+
+            width: 190.14px;
+            height: 0px;
+            top: -48px;
+            left: 97.98px;
+         }
+         p {
+            width: 185.29px;
+            position: relative;
+            z-index: 2;
+            @include textStyle(400, 13px, 15px);
+            font-family: "Roboto";
+            color: #000000;
+            top: -40px;
+            left: 102px;
+         }
+      }
+   }
+
+   @media (max-width: 600px) {
+      .card3 {
+         display: none;
+      }
+   }
+}
+
+.ContactMe {
+   position: relative;
+   height: 703.06px;
+   background-image: url(/img/ContactMe-bg.png);
+   background-repeat: no-repeat;
+
+   div {
+      padding-top: 70px;
+      padding-left: 28px;
+      h1 {
+         @include textStyle(700, 35px, 36px);
+         font-family: "Syncopate";
+         color: #f3d5d5;
+         text-shadow: 2px solid rgba(73, 7, 7, 0.33);
+         width: 321px;
+         text-align: left;
+         padding-bottom: 15px;
+      }
+      hr {
+         width: 259px;
+         height: 0px;
+         border: 5px solid #000000;
+      }
+      p {
+         padding-top: 15px;
+         @include textStyle(400, 14px, 16px);
+         font-family: "Roboto";
+         width: 259px;
+         color: #e8d6d6;
+      }
+   }
+   .button {
+      background: #f4e2e2;
+      border-radius: 27px;
+      width: 194px;
+      height: 54px;
+      border: 0;
+      position: absolute;
+      top: 542px;
+      left: 89px;
+   }
+   .text {
+      @include textStyle(900, 19px, 22px);
+      font-family: "Roboto";
+      color: #ff0000;
+   }
+   .w {
+      position: absolute;
+      top: 600px;
+      left: -10px;
+      height: 100px;
+   }
+   .b {
+      position: absolute;
+      top: 582px;
+      left: 30px;
+      height: 140px;
+   }
+   .i {
+      position: absolute;
+      top: 600px;
+      left: 104px;
+      height: 100px;
+   }
+}
+
+@media (max-width: 600px) {
+   .CompanyDetails {
+      display: none;
+   }
+}

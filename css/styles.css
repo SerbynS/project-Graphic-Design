@@ -1,0 +1,2014 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Inter:wght@200;300;500&family=Italiana&family=Merriweather&family=Montserrat:wght@700&family=Roboto:wght@100;300&family=Rubik:wght@300&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+
+header {
+  background-image: url(../img/black-bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+header nav input[type=checkbox] {
+  display: none;
+}
+header nav input[type=checkbox]:checked ~ .navigation {
+  display: block;
+  position: absolute;
+  visibility: visible;
+  left: 50px;
+  right: 0;
+  top: 70px;
+}
+header nav input[type=checkbox]:checked ~ label span {
+  background-color: white;
+  transform: rotate(-45deg);
+  transition-duration: 1.5s;
+  width: 40px;
+  height: 6px;
+}
+header nav input[type=checkbox]:checked ~ label span::before {
+  background-color: white;
+  transform: rotate(0);
+  transition-duration: 1.5s;
+  top: 0px;
+  width: 40px;
+  height: 6px;
+}
+header nav input[type=checkbox]:checked ~ label span::after {
+  background-color: white;
+  transform: rotate(90deg);
+  transition-duration: 1.5s;
+  top: 0px;
+  width: 40px;
+  height: 6px;
+}
+header nav label {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+}
+header nav label:hover {
+  cursor: pointer;
+}
+header nav label span,
+header nav label span::after,
+header nav label span::before {
+  content: "";
+  background: #d80808;
+  border-radius: 11px;
+  position: absolute;
+  top: 40px;
+  transition: 0.3s;
+}
+header nav label span::before {
+  top: -13px;
+  width: 50px;
+  height: 7px;
+  left: 0;
+}
+header nav label span {
+  width: 40px;
+  height: 6px;
+  left: 35px;
+}
+header nav label span::after {
+  top: 13px;
+  width: 32px;
+  height: 5px;
+  left: 0;
+}
+header nav .navigation {
+  color: white;
+  display: block;
+  background-color: rgb(175, 3, 3);
+  border-radius: 31px;
+  width: 295px;
+  height: 468px;
+  padding-top: 30px;
+  position: fixed;
+  visibility: hidden;
+  left: 50px;
+  right: 0;
+  top: -100%;
+  z-index: 1;
+  transition-duration: 1.5s;
+}
+header nav .navigation .navigation-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header nav .navigation .navigation-list h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Syncopate";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 12px;
+}
+header nav .navigation .navigation-list .navigation-item {
+  margin-bottom: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+}
+header nav .navigation .navigation-list .navigation-item:nth-child(even) {
+  width: 216px;
+  height: 58px;
+  border-radius: 13px;
+  border: none;
+  padding: 10px;
+  background-color: #850202;
+}
+header nav .navigation .navigation-list .navigation-item:nth-child(even) div {
+  background-color: rgba(58, 0, 0, 0.89);
+  border-radius: 13px;
+  width: 196px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .navigation .navigation-list .navigation-item:nth-child(odd) {
+  border-radius: 13px;
+  border: none;
+  padding: 5px 20px;
+  width: 196px;
+  height: 40px;
+  color: black;
+  background: #e00a0a;
+}
+header nav .navigation .navigation-list .navigation-item:nth-child(odd) div {
+  background-color: rgba(148, 5, 5, 0.53);
+  border-radius: 13px;
+  width: 151px;
+  height: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .navigation .contact-btn {
+  display: none;
+}
+header .hero {
+  overflow: hidden;
+  height: 648px;
+  width: 100vw;
+}
+header .hero .img-hero {
+  position: absolute;
+}
+header .hero .img-hero.mobile {
+  left: 11%;
+  top: 16%;
+}
+header .hero .img-hero.desktop {
+  display: none;
+}
+header .hero .graphic,
+header .hero .design {
+  display: none;
+}
+header .hero .hero-quality {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 70;
+  font-size: 12px;
+  line-height: 26px;
+  color: #bb9292;
+  position: absolute;
+  top: 86%;
+  left: 57.5%;
+}
+header .hero .hero-design {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  color: #ff0000;
+  width: 140px;
+  position: absolute;
+  top: 78%;
+  left: 10.5%;
+}
+header .hero .contact-btn-mobile {
+  background: #d80808;
+  border-radius: 27px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 133px;
+  height: 43px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 16px;
+  position: absolute;
+  top: 47%;
+  left: 10.5%;
+}
+header .hero .contact-btn-mobile a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  background-image: url(../img/red-bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .my-task {
+  height: 822px;
+}
+main .my-task h2 {
+  font-family: "Syncopate";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 33px;
+  position: absolute;
+  top: 3.5%;
+}
+main .my-task h2.black {
+  left: 23.6%;
+}
+main .my-task h2.pink {
+  left: 22%;
+  color: #f4bdbd;
+}
+main .my-task .red-shape.desktop {
+  display: none;
+}
+main .my-task .red-shape.mobile {
+  position: absolute;
+  top: 5.6%;
+  left: -2%;
+}
+main .my-task .dark-shape.desktop {
+  display: none;
+}
+main .my-task .dark-shape.mobile {
+  position: absolute;
+  top: 29%;
+}
+main .my-task .light-shape.desktop {
+  display: none;
+}
+main .my-task .light-shape.mobile {
+  position: absolute;
+  top: 49%;
+  left: 8%;
+}
+main .my-task .icon {
+  display: none;
+}
+
+.modal-Contact-me {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 2;
+  height: 758px;
+  background: linear-gradient(rgba(124, 0, 0, 0.52), rgba(124, 0, 0, 0.52)), url(../img/bg-modal-mobile.png);
+  background-size: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.modal-Contact-me h2 {
+  font-family: "Syncopate";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 35px;
+}
+.modal-Contact-me h2:nth-child(1) {
+  position: absolute;
+  top: 65px;
+  left: 25px;
+  color: white;
+}
+.modal-Contact-me h2:nth-child(2) {
+  color: #960000;
+  padding-top: 65px;
+  padding-left: 30px;
+  margin-bottom: 53px;
+}
+.modal-Contact-me .input-modal {
+  box-sizing: border-box;
+  width: 306px;
+  height: 48px;
+  margin: 37px auto 0;
+  border: 4px solid rgba(238, 5, 5, 0.25);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-Contact-me .input-modal input {
+  box-sizing: border-box;
+  width: 302px;
+  height: 40px;
+  padding-left: 15px;
+  background: rgba(0, 0, 0, 0.48);
+  border: 4px solid rgba(238, 5, 5, 0.13);
+  border-radius: 15px;
+}
+.modal-Contact-me .input-modal input::-moz-placeholder {
+  color: #ff0000;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.modal-Contact-me .input-modal input::placeholder {
+  color: #ff0000;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.modal-Contact-me button {
+  background: #d80808;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  border-radius: 27px;
+  border: none;
+  height: 54px;
+  width: 194px;
+  margin: 96px auto 0px;
+}
+.modal-Contact-me button a {
+  text-decoration: none;
+  color: white;
+}
+.modal-Contact-me:target {
+  display: flex;
+}
+
+.modal-Thanks {
+  background-color: rgba(115, 5, 5, 0.81);
+  height: 758px;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  display: block;
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.modal-Thanks h2 {
+  font-family: "Syncopate";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 119.6%;
+  width: 312px;
+  padding-top: 206px;
+  text-align: center;
+}
+.modal-Thanks h2:nth-child(1) {
+  position: absolute;
+  left: 25px;
+  color: white;
+}
+.modal-Thanks h2:nth-child(2) {
+  color: rgba(255, 4, 4, 0.74);
+  padding-left: 28px;
+  margin-bottom: 160px;
+}
+.modal-Thanks button {
+  box-sizing: content-box;
+  background: #d80808;
+  border-radius: 27px;
+  border: none;
+  width: 194px;
+  height: 54px;
+  margin-left: 82px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+}
+.modal-Thanks button a {
+  text-decoration: none;
+  color: white;
+}
+.modal-Thanks:target {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 90%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 auto;
+  }
+  header {
+    background-image: url(../img/black-bg-desktop.png);
+  }
+  header nav label span,
+  header nav label span::after,
+  header nav label span::before {
+    display: none;
+  }
+  header nav .navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    visibility: visible;
+    position: relative;
+    left: 0px;
+    background-color: transparent;
+    border-radius: 0;
+    height: -moz-max-content;
+    height: max-content;
+    width: 100%;
+    padding: 25px 0 5px 0;
+    margin: 0;
+    transition-duration: 0s;
+  }
+  header nav .navigation .logo {
+    width: 160px;
+    height: 56px;
+    background: #d80808;
+    border-radius: 27px;
+  }
+  header nav .navigation .navigation-list {
+    flex-direction: row;
+  }
+  header nav .navigation .navigation-list h2 {
+    display: none;
+  }
+  header nav .navigation .navigation-list .navigation-item {
+    margin: 0 40px 0 0;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  header nav .navigation .navigation-list .navigation-item:nth-child(odd), header nav .navigation .navigation-list .navigation-item:nth-child(even) {
+    width: -moz-max-content;
+    width: max-content;
+    height: -moz-max-content;
+    height: max-content;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+    color: white;
+  }
+  header nav .navigation .navigation-list .navigation-item:nth-child(odd) div, header nav .navigation .navigation-list .navigation-item:nth-child(even) div {
+    background-color: transparent;
+    border-radius: 0;
+    width: -moz-max-content;
+    width: max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  header nav .navigation .contact-btn {
+    display: inline-block;
+    background: #d80808;
+    border-radius: 27px;
+    border: none;
+    padding: 13px 22px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 22px;
+  }
+  header nav .navigation .contact-btn a {
+    text-decoration: none;
+    color: white;
+  }
+  header .hero {
+    height: 1004px;
+  }
+  header .hero .img-hero.mobile {
+    display: none;
+  }
+  header .hero .img-hero.desktop {
+    display: block;
+    left: 21%;
+    top: 0%;
+  }
+  header .hero .graphic,
+  header .hero .design {
+    display: block;
+    position: absolute;
+  }
+  header .hero .graphic {
+    top: 19%;
+    left: 6%;
+  }
+  header .hero .design {
+    top: 69%;
+    right: 4%;
+  }
+  header .hero .hero-quality {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    top: 17%;
+    left: 76%;
+  }
+  header .hero .hero-design {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    width: 303px;
+    top: 77%;
+    left: 7%;
+  }
+  header .hero .contact-btn-mobile {
+    display: none;
+  }
+  main {
+    background-image: url(../img/bg-red-desktop.png);
+  }
+  main .my-task {
+    height: 945px;
+  }
+  main .my-task h2 {
+    font-family: "Syncopate";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 59px;
+    top: 3%;
+  }
+  main .my-task h2.black {
+    left: 6%;
+  }
+  main .my-task h2.pink {
+    left: 5.28%;
+  }
+  main .my-task .red-shape,
+  main .my-task .dark-shape,
+  main .my-task .light-shape {
+    position: absolute;
+  }
+  main .my-task .red-shape.desktop {
+    display: block;
+    left: 9%;
+    top: 9%;
+  }
+  main .my-task .red-shape.mobile {
+    display: none;
+  }
+  main .my-task .dark-shape.desktop {
+    display: block;
+    left: 17%;
+    top: 32%;
+  }
+  main .my-task .dark-shape.mobile {
+    display: none;
+  }
+  main .my-task .light-shape.desktop {
+    display: block;
+    left: 27%;
+    top: 50%;
+  }
+  main .my-task .light-shape.mobile {
+    display: none;
+  }
+  main .my-task .icon {
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+  main .my-task .icon div {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .my-task .icon:nth-of-type(1) {
+    width: 187px;
+    height: 185.07px;
+    box-shadow: 0px 0px 6px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(52, 10, 10, 0.12);
+    top: 6%;
+    left: 43%;
+  }
+  main .my-task .icon:nth-of-type(1) div {
+    background: #e50000;
+    width: 151px;
+    height: 149.44px;
+  }
+  main .my-task .icon:nth-of-type(2) {
+    width: 225px;
+    height: 223px;
+    box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.23);
+    background-color: rgba(26, 2, 2, 0.08);
+    top: 30%;
+    left: 58%;
+  }
+  main .my-task .icon:nth-of-type(2) div {
+    background: #713232;
+    width: 192px;
+    height: 190px;
+  }
+  main .my-task .icon:nth-of-type(3) {
+    width: 270px;
+    height: 267px;
+    box-shadow: 0px 0px 6px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(6, 0, 0, 0.01);
+    top: 56%;
+    left: 70%;
+  }
+  main .my-task .icon:nth-of-type(3) div {
+    background: #f0c9c9;
+    width: 237px;
+    height: 235px;
+  }
+  .modal-Contact-me {
+    background: linear-gradient(rgba(129, 1, 1, 0.52), rgba(129, 1, 1, 0.52)), url(../img/bg-modal-desktop.png);
+    width: 1046px;
+    height: 681px;
+    border-radius: 24px;
+    border: 20px solid rgba(194, 0, 0, 0.52);
+  }
+  .modal-Contact-me h2 {
+    font-family: "Syncopate";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 36px;
+  }
+  .modal-Contact-me h2:nth-child(1) {
+    top: 50px;
+    left: 47px;
+  }
+  .modal-Contact-me h2:nth-child(2) {
+    color: rgba(45, 1, 1, 0.74);
+    padding-top: 51px;
+    padding-left: 53px;
+    margin-bottom: 77px;
+  }
+  .modal-Contact-me .input-modal {
+    width: 945px;
+    height: 83px;
+    margin: 34px auto 0;
+  }
+  .modal-Contact-me .input-modal input {
+    width: 934px;
+    height: 63px;
+    padding-left: 20px;
+  }
+  .modal-Contact-me button {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+    width: 172px;
+    height: 56px;
+    margin: 57px auto 0px;
+  }
+  .modal-Thanks {
+    width: 1046px;
+    height: 681px;
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 24px;
+    border: 20px solid rgba(194, 0, 0, 0.52);
+    opacity: 0;
+  }
+  .modal-Thanks h2 {
+    font-family: "Syncopate";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 36px;
+    width: 900px;
+  }
+  .modal-Thanks h2:nth-child(1) {
+    left: 72px;
+    color: white;
+  }
+  .modal-Thanks h2:nth-child(2) {
+    color: rgba(255, 4, 4, 0.74);
+    padding-left: 75px;
+    margin-bottom: 160px;
+  }
+  .modal-Thanks button {
+    margin-left: 420px;
+  }
+  .modal-Thanks:target {
+    opacity: 1;
+  }
+}
+section {
+  background-image: url(../../img/desktop/dBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 130px;
+}
+section .PROJECTS {
+  display: flex;
+  width: auto;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+section .PROJECTS .fckng_card {
+  height: 347.73px;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  position: relative;
+}
+section h1 {
+  color: #e4cfcf;
+  text-shadow: 2px 1px 0px rgba(226, 13, 13, 0.5);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 34px;
+  font-family: Syncopate;
+  text-align: center;
+  padding-top: 26px;
+}
+section > div {
+  margin-bottom: 55px;
+}
+section .desktop_card1,
+section .desktop_card2 {
+  display: none;
+}
+section .mobile_card1,
+section .mobile_card2 {
+  color: #ffffff;
+}
+section .mobile_card1 .img-div,
+section .mobile_card2 .img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #e30707 0%, #6a1212 73.1%);
+  border: 2px solid rgba(29, 28, 28, 0.33);
+  border-radius: 11px;
+  box-shadow: 0px 0px 0px 7px rgba(0, 0, 0, 0.16);
+  width: 312px;
+  height: 187px;
+  padding: 20px 26px;
+}
+section .mobile_card1 .img-div .card1,
+section .mobile_card2 .img-div .card1 {
+  width: 290px;
+  height: 180.75px;
+}
+section .mobile_card1 .img-div .card2,
+section .mobile_card2 .img-div .card2 {
+  width: 269px;
+  height: 154.77px;
+}
+section .mobile_card1 .text,
+section .mobile_card2 .text {
+  width: 100%;
+}
+section .mobile_card1 .text h6,
+section .mobile_card2 .text h6 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 7px;
+  padding-left: 80px;
+}
+section .mobile_card1 .text p,
+section .mobile_card2 .text p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  padding-top: 7px;
+  padding-left: 80px;
+}
+section .mobile_card1 .text p span,
+section .mobile_card2 .text p span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 15px;
+  font-family: Rubik;
+  padding-left: 16px;
+}
+section button {
+  display: block;
+  width: 184px;
+  height: 64px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ffffff;
+  background: #d80808;
+  border-radius: 27px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .projects {
+    background-size: cover;
+    padding-bottom: 500px;
+  }
+  .projects h1 {
+    color: #e4cfcf;
+    text-shadow: 2px 1px 0px rgba(226, 13, 13, 0.5);
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 59px;
+    font-family: Syncopate;
+    text-align: left;
+    padding-top: 38px;
+    margin-bottom: 83px;
+    margin-left: 78px;
+  }
+  .projects .PROJECTS {
+    display: flex;
+    width: 1130.33px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .projects .PROJECTS .desktop_card1,
+  .projects .PROJECTS .desktop_card2 {
+    display: block;
+  }
+  .projects .PROJECTS .fckng_card {
+    width: 462.96px;
+    height: 347.73px;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    position: relative;
+  }
+  .projects .PROJECTS .fckng_card > div {
+    width: 445.92px;
+    height: 286.48px;
+    background: linear-gradient(180deg, #e30707 0%, #6a1212 73.1%);
+    border: 2px solid rgba(29, 28, 28, 0.33);
+    border-radius: 11px;
+    padding: 30px 36px;
+    box-shadow: 0px 0px 0px 7px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 0px 106px 9px rgba(255, 255, 255, 0.1);
+  }
+  .projects .PROJECTS .fckng_card > div img {
+    width: 372.77px;
+    height: 228.2px;
+  }
+  .projects .PROJECTS .text {
+    color: #ffffff;
+  }
+  .projects .PROJECTS .text h6 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 7px;
+    padding-left: 10px;
+  }
+  .projects .PROJECTS .text p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding-top: 7px;
+    margin-bottom: 83px;
+    padding-left: 10px;
+  }
+  .projects .PROJECTS .text p span {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 15px;
+    font-family: Rubik;
+    padding-left: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .MyTask {
+    height: 945.13px;
+    background-image: url(/img/Rectangle\ 35.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .MyTask .h1 {
+    text-align: left;
+    padding-left: 76px;
+    color: #e4cfcf;
+    text-shadow: 2px 1px 0px rgba(226, 13, 13, 0.5);
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 59px;
+    font-family: "Syncopate";
+    width: 653px;
+    height: 60px;
+  }
+  .MyTask .one {
+    position: absolute;
+    top: 80px;
+    left: 135px;
+  }
+  .MyTask .one .heart {
+    position: absolute;
+    top: -48px;
+    left: 479px;
+  }
+  .MyTask .one h1 {
+    font-size: 210px;
+    line-height: 244px;
+    top: 100px;
+    left: 20px;
+  }
+  .MyTask .one .one-p p {
+    font-size: 18px;
+    top: 138px;
+    left: 133px;
+  }
+  .MyTask .two {
+    position: absolute;
+    top: 65px;
+    left: 245px;
+  }
+  .MyTask .two .chating {
+    position: absolute;
+    top: 194px;
+    left: 581px;
+  }
+  .MyTask .two h1 {
+    font-size: 200px;
+    line-height: 241px;
+    top: 427px;
+    left: 36px;
+  }
+  .MyTask .two .two-p p {
+    line-height: 19px;
+    font-size: 16px;
+    top: 143px;
+    right: 94px;
+  }
+  .MyTask .two .two-p h3 {
+    font-size: 18px;
+    line-height: 21px;
+    top: 89px;
+    right: 9px;
+  }
+  .MyTask .three {
+    position: absolute;
+    top: 68px;
+    left: 342px;
+  }
+  .MyTask .three .notebook {
+    position: absolute;
+    top: 442px;
+    left: 640px;
+  }
+  .MyTask .three h1 {
+    font-size: 200px;
+    line-height: 241px;
+    top: 630px;
+    left: 63px;
+  }
+  .MyTask .three .three-p p {
+    font-size: 16px;
+    line-height: 19px;
+    top: 178px;
+    right: 65px;
+  }
+  .MyTask .three .three-p h3 {
+    font-size: 18px;
+    line-height: 21px;
+    top: 323px;
+    left: 220px;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  .MyTask .elipse1 {
+    display: none;
+  }
+  .MyTask .elipse2 {
+    display: none;
+  }
+  .MyTask .elipse3 {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .Reviews {
+    height: 1766px;
+    background-image: url(/img/backgraund2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .Reviews h1 {
+    text-align: left;
+    padding-left: 76px;
+    color: #e4cfcf;
+    text-shadow: 2px 1px 0px rgba(226, 13, 13, 0.5);
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 59px;
+    font-family: "Syncopate";
+    width: 653px;
+    height: 60px;
+  }
+  .Reviews .card1 {
+    width: 400px;
+    top: -2px;
+    left: 919px;
+  }
+  .Reviews .card1 div img {
+    top: 279px;
+    left: -120px;
+  }
+  .Reviews .card1 div p {
+    width: 206.28px;
+    height: 63.23px;
+    font-size: 16px;
+    line-height: 19px;
+    top: -125px;
+    left: -50px;
+  }
+  .Reviews .card1 div h3 {
+    top: -140px;
+    left: 1px;
+  }
+  .Reviews .card1 div hr {
+    width: 205.28px;
+    height: 0px;
+    top: -135px;
+    left: -58px;
+  }
+  .Reviews .card2 {
+    top: -550px;
+    left: 163px;
+    width: 400px;
+  }
+  .Reviews .card2 div img {
+    top: 285px;
+    left: 147px;
+  }
+  .Reviews .card2 div h3 {
+    top: -135px;
+    left: 250px;
+  }
+  .Reviews .card2 div hr {
+    width: 205.28px;
+    height: 0px;
+    top: -130px;
+    left: 206px;
+  }
+  .Reviews .card2 div p {
+    width: 199.27px;
+    height: 56.8px;
+    font-size: 16px;
+    line-height: 19px;
+    top: -120px;
+    left: 225px;
+  }
+  .Reviews .card3 {
+    position: absolute;
+    top: 500px;
+    left: 520px;
+    width: 400px;
+  }
+  .Reviews .card3 div img {
+    position: absolute;
+    top: 434px;
+    left: 30px;
+  }
+  .Reviews .card3 div h3 {
+    position: relative;
+    z-index: 2;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: "Roboto";
+    color: #ffffff;
+    top: -80px;
+    left: 155px;
+  }
+  .Reviews .card3 div hr {
+    position: relative;
+    z-index: 2;
+    width: 205.28px;
+    height: 0px;
+    border: 2px solid #ffffff;
+    top: -70px;
+    left: 105px;
+  }
+  .Reviews .card3 div p {
+    position: relative;
+    z-index: 2;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: "Roboto";
+    color: #ffffff;
+    top: -60px;
+    left: 145px;
+  }
+}
+@media (min-width: 992px) {
+  .ContactMe {
+    position: absolute;
+    top: 5049px;
+    left: 150px;
+    height: 505px;
+    width: 1181.54px;
+    background-image: url(/img/Group\ 2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .ContactMe div {
+    padding-top: 140px;
+    padding-left: 130px;
+  }
+  .ContactMe div h1 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 42px;
+    font-family: "Syncopate";
+    width: 581.81px;
+    text-shadow: 2px solid rgba(73, 7, 7, 0.33);
+    padding-bottom: 0px;
+  }
+  .ContactMe div hr {
+    width: 558.78px;
+    border: 4px solid #000000;
+  }
+  .ContactMe div p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: "Roboto";
+    width: 445px;
+  }
+  .ContactMe .button {
+    top: 210px;
+    left: 791px;
+    background: #f4e2e2;
+    box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 27px;
+    width: 196.27px;
+    height: 63.64px;
+  }
+  .ContactMe .text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 22px;
+    font-family: "Roboto";
+  }
+  .ContactMe .i {
+    top: 348px;
+    left: 100px;
+  }
+  .ContactMe .b {
+    top: 310px;
+    left: 124px;
+  }
+  .ContactMe .w {
+    top: 349px;
+    left: 215px;
+  }
+}
+@media (min-width: 992px) {
+  .CompanyDetails {
+    position: relative;
+    height: 179.83px;
+    background-color: #020202;
+    background-size: cover;
+  }
+  .CompanyDetails h3 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 16px;
+    font-family: "Syncopate";
+    color: #ff0000;
+    padding-top: 84px;
+    padding-left: 82px;
+  }
+  .CompanyDetails p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: "Roboto";
+    color: #d8d3d3;
+  }
+  .CompanyDetails div {
+    position: absolute;
+    top: 0px;
+    left: 539px;
+  }
+  .CompanyDetails div hr {
+    width: 111.59px;
+    height: 0px;
+    border: 2px solid #ff2929;
+    transform: rotate(90deg);
+  }
+  .CompanyDetails .DesignServices {
+    width: 355.27px;
+    position: relative;
+    top: -20px;
+  }
+  .CompanyDetails .MainPage {
+    position: absolute;
+    top: 95px;
+    left: 83px;
+  }
+  .CompanyDetails .TermsOfService {
+    position: absolute;
+    top: 124px;
+    left: 83px;
+  }
+  .CompanyDetails .E-mail {
+    width: 251.35px;
+    position: absolute;
+    top: 130px;
+    left: 309px;
+  }
+  .CompanyDetails .phone {
+    width: 149.21px;
+    position: absolute;
+    top: 127px;
+    left: 693px;
+  }
+}
+.Reviews * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.Reviews {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 1186px;
+  background-image: url(/img/фон2\ 1.png);
+  background-repeat: no-repeat;
+}
+.Reviews h1 {
+  color: #f4bdbd;
+  text-shadow: 2px 1px 0px rgba(226, 13, 13, 0.5);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 34px;
+  font-family: Syncopate;
+  text-align: center;
+  padding-top: 20px;
+}
+.Reviews .card1 {
+  position: relative;
+  top: -54px;
+}
+.Reviews .card1 div img {
+  position: absolute;
+  top: 357px;
+  left: 39px;
+}
+.Reviews .card1 div h3 {
+  width: 150px;
+  position: absolute;
+  top: 395px;
+  left: 120px;
+  z-index: 2;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "Roboto";
+}
+.Reviews .card1 div p {
+  width: 190.14px;
+  position: relative;
+  z-index: 2;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  font-family: "Roboto";
+  color: #000000;
+  top: -35px;
+  left: 120px;
+}
+.Reviews .card1 div hr {
+  position: relative;
+  z-index: 2;
+  border: 2px solid #000000;
+  width: 190.14px;
+  height: 0px;
+  top: -48px;
+  left: 97.98px;
+}
+.Reviews .card2 {
+  position: relative;
+  top: -50px;
+}
+.Reviews .card2 div img {
+  position: absolute;
+  top: 347px;
+  right: 15px;
+}
+.Reviews .card2 div h3 {
+  width: 150px;
+  position: absolute;
+  top: 390px;
+  left: 100px;
+  z-index: 2;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "Roboto";
+}
+.Reviews .card2 div hr {
+  position: relative;
+  z-index: 2;
+  border: 2px solid #000000;
+  width: 190.14px;
+  height: 0px;
+  top: -48px;
+  left: 97.98px;
+}
+.Reviews .card2 div p {
+  width: 185.29px;
+  position: relative;
+  z-index: 2;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  font-family: "Roboto";
+  color: #000000;
+  top: -40px;
+  left: 102px;
+}
+@media (max-width: 600px) {
+  .Reviews .card3 {
+    display: none;
+  }
+}
+
+.ContactMe {
+  position: relative;
+  height: 703.06px;
+  background-image: url(/img/ContactMe-bg.png);
+  background-repeat: no-repeat;
+}
+.ContactMe div {
+  padding-top: 70px;
+  padding-left: 28px;
+}
+.ContactMe div h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 36px;
+  font-family: "Syncopate";
+  color: #f3d5d5;
+  text-shadow: 2px solid rgba(73, 7, 7, 0.33);
+  width: 321px;
+  text-align: left;
+  padding-bottom: 15px;
+}
+.ContactMe div hr {
+  width: 259px;
+  height: 0px;
+  border: 5px solid #000000;
+}
+.ContactMe div p {
+  padding-top: 15px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "Roboto";
+  width: 259px;
+  color: #e8d6d6;
+}
+.ContactMe .button {
+  background: #f4e2e2;
+  border-radius: 27px;
+  width: 194px;
+  height: 54px;
+  border: 0;
+  position: absolute;
+  top: 542px;
+  left: 89px;
+}
+.ContactMe .text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 19px;
+  line-height: 22px;
+  font-family: "Roboto";
+  color: #ff0000;
+}
+.ContactMe .w {
+  position: absolute;
+  top: 600px;
+  left: -10px;
+  height: 100px;
+}
+.ContactMe .b {
+  position: absolute;
+  top: 582px;
+  left: 30px;
+  height: 140px;
+}
+.ContactMe .i {
+  position: absolute;
+  top: 600px;
+  left: 104px;
+  height: 100px;
+}
+
+@media (max-width: 600px) {
+  .CompanyDetails {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .MyTask {
+    height: 945.13px;
+    background-image: url(/img/Rectangle\ 35.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .MyTask .h1 {
+    text-align: left;
+    padding-left: 76px;
+    color: #e4cfcf;
+    text-shadow: 2px 1px 0px rgba(226, 13, 13, 0.5);
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 59px;
+    font-family: "Syncopate";
+    width: 653px;
+    height: 60px;
+  }
+  .MyTask .one {
+    position: absolute;
+    top: 80px;
+    left: 135px;
+  }
+  .MyTask .one .heart {
+    position: absolute;
+    top: -48px;
+    left: 479px;
+  }
+  .MyTask .one h1 {
+    font-size: 210px;
+    line-height: 244px;
+    top: 100px;
+    left: 20px;
+  }
+  .MyTask .one .one-p p {
+    font-size: 18px;
+    top: 138px;
+    left: 133px;
+  }
+  .MyTask .two {
+    position: absolute;
+    top: 65px;
+    left: 245px;
+  }
+  .MyTask .two .chating {
+    position: absolute;
+    top: 194px;
+    left: 581px;
+  }
+  .MyTask .two h1 {
+    font-size: 200px;
+    line-height: 241px;
+    top: 427px;
+    left: 36px;
+  }
+  .MyTask .two .two-p p {
+    line-height: 19px;
+    font-size: 16px;
+    top: 143px;
+    right: 94px;
+  }
+  .MyTask .two .two-p h3 {
+    font-size: 18px;
+    line-height: 21px;
+    top: 89px;
+    right: 9px;
+  }
+  .MyTask .three {
+    position: absolute;
+    top: 68px;
+    left: 342px;
+  }
+  .MyTask .three .notebook {
+    position: absolute;
+    top: 442px;
+    left: 640px;
+  }
+  .MyTask .three h1 {
+    font-size: 200px;
+    line-height: 241px;
+    top: 630px;
+    left: 63px;
+  }
+  .MyTask .three .three-p p {
+    font-size: 16px;
+    line-height: 19px;
+    top: 178px;
+    right: 65px;
+  }
+  .MyTask .three .three-p h3 {
+    font-size: 18px;
+    line-height: 21px;
+    top: 323px;
+    left: 220px;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  .MyTask .elipse1 {
+    display: none;
+  }
+  .MyTask .elipse2 {
+    display: none;
+  }
+  .MyTask .elipse3 {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .Reviews {
+    height: 1766px;
+    background-image: url(/img/backgraund2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .Reviews h1 {
+    text-align: left;
+    padding-left: 76px;
+    color: #e4cfcf;
+    text-shadow: 2px 1px 0px rgba(226, 13, 13, 0.5);
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 59px;
+    font-family: "Syncopate";
+    width: 653px;
+    height: 60px;
+  }
+  .Reviews .card1 {
+    width: 400px;
+    top: -2px;
+    left: 919px;
+  }
+  .Reviews .card1 div img {
+    top: 279px;
+    left: -120px;
+  }
+  .Reviews .card1 div p {
+    width: 206.28px;
+    height: 63.23px;
+    font-size: 16px;
+    line-height: 19px;
+    top: -125px;
+    left: -50px;
+  }
+  .Reviews .card1 div h3 {
+    top: -140px;
+    left: 1px;
+  }
+  .Reviews .card1 div hr {
+    width: 205.28px;
+    height: 0px;
+    top: -135px;
+    left: -58px;
+  }
+  .Reviews .card2 {
+    top: -550px;
+    left: 163px;
+    width: 400px;
+  }
+  .Reviews .card2 div img {
+    top: 285px;
+    left: 147px;
+  }
+  .Reviews .card2 div h3 {
+    top: -135px;
+    left: 250px;
+  }
+  .Reviews .card2 div hr {
+    width: 205.28px;
+    height: 0px;
+    top: -130px;
+    left: 206px;
+  }
+  .Reviews .card2 div p {
+    width: 199.27px;
+    height: 56.8px;
+    font-size: 16px;
+    line-height: 19px;
+    top: -120px;
+    left: 225px;
+  }
+  .Reviews .card3 {
+    position: absolute;
+    top: 500px;
+    left: 520px;
+    width: 400px;
+  }
+  .Reviews .card3 div img {
+    position: absolute;
+    top: 434px;
+    left: 30px;
+  }
+  .Reviews .card3 div h3 {
+    position: relative;
+    z-index: 2;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: "Roboto";
+    color: #ffffff;
+    top: -80px;
+    left: 155px;
+  }
+  .Reviews .card3 div hr {
+    position: relative;
+    z-index: 2;
+    width: 205.28px;
+    height: 0px;
+    border: 2px solid #ffffff;
+    top: -70px;
+    left: 105px;
+  }
+  .Reviews .card3 div p {
+    position: relative;
+    z-index: 2;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: "Roboto";
+    color: #ffffff;
+    top: -60px;
+    left: 145px;
+  }
+}
+@media (min-width: 992px) {
+  .ContactMe {
+    position: absolute;
+    top: 5049px;
+    left: 150px;
+    height: 505px;
+    width: 1181.54px;
+    background-image: url(/img/Group\ 2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .ContactMe div {
+    padding-top: 140px;
+    padding-left: 130px;
+  }
+  .ContactMe div h1 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 42px;
+    font-family: "Syncopate";
+    width: 581.81px;
+    text-shadow: 2px solid rgba(73, 7, 7, 0.33);
+    padding-bottom: 0px;
+  }
+  .ContactMe div hr {
+    width: 558.78px;
+    border: 4px solid #000000;
+  }
+  .ContactMe div p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: "Roboto";
+    width: 445px;
+  }
+  .ContactMe .button {
+    top: 210px;
+    left: 791px;
+    background: #f4e2e2;
+    box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 27px;
+    width: 196.27px;
+    height: 63.64px;
+  }
+  .ContactMe .text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 22px;
+    font-family: "Roboto";
+  }
+  .ContactMe .i {
+    top: 348px;
+    left: 100px;
+  }
+  .ContactMe .b {
+    top: 310px;
+    left: 124px;
+  }
+  .ContactMe .w {
+    top: 349px;
+    left: 215px;
+  }
+}
+@media (min-width: 992px) {
+  .CompanyDetails {
+    position: relative;
+    height: 179.83px;
+    background-color: #020202;
+    background-size: cover;
+  }
+  .CompanyDetails h3 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 16px;
+    font-family: "Syncopate";
+    color: #ff0000;
+    padding-top: 84px;
+    padding-left: 82px;
+  }
+  .CompanyDetails p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: "Roboto";
+    color: #d8d3d3;
+  }
+  .CompanyDetails div {
+    position: absolute;
+    top: 0px;
+    left: 539px;
+  }
+  .CompanyDetails div hr {
+    width: 111.59px;
+    height: 0px;
+    border: 2px solid #ff2929;
+    transform: rotate(90deg);
+  }
+  .CompanyDetails .DesignServices {
+    width: 355.27px;
+    position: relative;
+    top: -20px;
+  }
+  .CompanyDetails .MainPage {
+    position: absolute;
+    top: 95px;
+    left: 83px;
+  }
+  .CompanyDetails .TermsOfService {
+    position: absolute;
+    top: 124px;
+    left: 83px;
+  }
+  .CompanyDetails .E-mail {
+    width: 251.35px;
+    position: absolute;
+    top: 130px;
+    left: 309px;
+  }
+  .CompanyDetails .phone {
+    width: 149.21px;
+    position: absolute;
+    top: 127px;
+    left: 693px;
+  }
+}
